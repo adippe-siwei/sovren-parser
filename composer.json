@@ -1,0 +1,38 @@
+{
+    "name": "siwei/sovren-parser",
+    "description": "Package to can call and parse response of Sovren API",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "sovren",
+        "parsing"
+    ],
+    "authors": [
+        {
+            "name": "Aurelien Dippe",
+            "email": "adippe@siwei.fr"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "*",
+        "illuminate/support": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Siwei\\SovrenParser\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Siwei\\SovrenParser\\SovrenParserServiceProvider"
+            ],
+            "aliases": {
+                "Sovren": "Via\\LaravelSovren\\SovrenFacade"
+            }
+        }
+    }
+}
